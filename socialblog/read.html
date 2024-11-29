@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Search Page</title>
+    <link rel="stylesheet" href="readblog.css">
+    <script src="readblog.js"></script>
+</head>
+<body>
+    <div id="navbar">
+        <div class="overlay" id="overlay"></div>
+        <div class="hamburger" id="hamburger">
+            <div id="line1" class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="socialBlog.html">Home</a></li>
+                <li><a href="read.html">Read Blogs</a></li>
+                <li><a href="put.html">Put Your Blog</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <input type="text" id="search-bar" placeholder="Search..." onkeyup="filterTopics()" />
+
+    <!-- Options -->
+    <div class="options-container">
+        <div class="option" onclick="showDescription('topic1')">
+            <h3>Topic 1</h3>
+            <p>shoet des about topic one</p>
+        </div>
+        <div class="option" onclick="showDescription('topic2')">
+            <h3>Topic 2</h3>
+            <p>shoet des about topic 2</p>
+        </div>
+        <div class="option" onclick="showDescription('topic3')">
+            <h3>Topic 3</h3>
+            <p>shoet des about topic 3</p>
+        </div>
+    </div>
+
+    <!-- Topic Description -->
+    <div id="topic-description" class="hidden">
+        <p id="topic-text">Here will be the detailed paragraph for the selected topic.</p>
+    </div>
+</body>
+</html>
